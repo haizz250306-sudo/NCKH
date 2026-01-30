@@ -1,0 +1,46 @@
+{
+  "name": "html-8",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "123"
+  ],
+  "homepage": "https://github.com/haizz250306-sudo/NCKH#readme",
+  "bugs": {
+    "url": "https://github.com/haizz250306-sudo/NCKH/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haizz250306-sudo/NCKH.git"
+  },
+  "license": "ISC",
+  "author": "Nam",
+  "type": "commonjs",
+  "main": "main/index.js",
+  "scripts": {
+    "beautiful": "lint-staged",
+    "start": "nodemon --inspect main/index.js",
+    "watch-sass": "sass --watch main/views/scss:main/public/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "main/**/*.{js,json,scss,hbs}": "prettier --single-quote --trailing-comma all --write"
+  },
+  "husky":{
+    "hook":{
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.4"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.8.1",
+    "sass": "^1.97.3"
+  }
+}
