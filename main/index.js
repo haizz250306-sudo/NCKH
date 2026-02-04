@@ -122,7 +122,7 @@ app.get("/ketqua.hbs", (req, res) => {
   res.render("ketqua.hbs");
 });
 
-app.get("/home.hbs", (req, res) => {
+app.get("/", (req, res) => {
   res.render("home.hbs");
 });
 
