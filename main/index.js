@@ -64,11 +64,11 @@ let poolPromise = sql.connect(config);
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
-app.get("/login.hbs", (req, res) => {
+app.get("/login", (req, res) => {
   res.render("login");
 });
 
-app.get("/login2.hbs", (req, res) => {
+app.get("/login2", (req, res) => {
   res.render("login2");
 });
 
@@ -99,27 +99,27 @@ app.post("/dashboard", async (req, res) => {
   }
 });
 
-app.get("/dashboard.hbs", (req, res) => {
+app.get("/dashboard", (req, res) => {
   res.render("dashboard");
 });
 
-app.get("/profile.hbs", (req, res) => {
+app.get("/profile", (req, res) => {
   res.render("profile");
 });
 
-app.get("/warning.hbs", (req, res) => {
-  res.render("warning.");
+app.get("/warning", (req, res) => {
+  res.render("warning");
 });
 
-app.get("/lichhoc.hbs", (req, res) => {
+app.get("/lichhoc", (req, res) => {
   res.render("lichhoc");
 });
 
-app.get("/lichthi.hbs", (req, res) => {
+app.get("/lichthi", (req, res) => {
   res.render("lichthi");
 });
 
-app.get("/ketqua.hbs", (req, res) => {
+app.get("/ketqua", (req, res) => {
   res.render("ketqua");
 });
 
