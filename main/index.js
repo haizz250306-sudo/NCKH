@@ -4,7 +4,8 @@ const hbs = require("express-handlebars");
 const sql = require("mssql");
 const path = require("path");
 const app = express();
-const port = 3001;
+const PORT = process.env.PORT || 3001;
+
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(
@@ -135,6 +136,7 @@ app.post("/hi", (req, res) => {
   res.render("https://www.youtube.com/?app=desktop&hl=vi");
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
+

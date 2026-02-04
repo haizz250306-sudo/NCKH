@@ -19,7 +19,8 @@
   "main": "main/index.js",
   "scripts": {
     "beautiful": "lint-staged",
-    "start": "nodemon --inspect main/index.js",
+    "start": "node main/index.js",
+
     "watch-sass": "sass --watch main/views/scss:main/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
