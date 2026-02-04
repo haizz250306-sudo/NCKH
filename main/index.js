@@ -65,11 +65,11 @@ app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
 app.get("/login.hbs", (req, res) => {
-  res.render("login.hbs");
+  res.render("login");
 });
 
 app.get("/login2.hbs", (req, res) => {
-  res.render("login2.hbs");
+  res.render("login2");
 });
 
 app.post("/dashboard", async (req, res) => {
@@ -100,31 +100,31 @@ app.post("/dashboard", async (req, res) => {
 });
 
 app.get("/dashboard.hbs", (req, res) => {
-  res.render("dashboard.hbs");
+  res.render("dashboard");
 });
 
 app.get("/profile.hbs", (req, res) => {
-  res.render("profile.hbs");
+  res.render("profile");
 });
 
 app.get("/warning.hbs", (req, res) => {
-  res.render("warning.hbs");
+  res.render("warning.");
 });
 
 app.get("/lichhoc.hbs", (req, res) => {
-  res.render("lichhoc.hbs");
+  res.render("lichhoc");
 });
 
 app.get("/lichthi.hbs", (req, res) => {
-  res.render("lichthi.hbs");
+  res.render("lichthi");
 });
 
 app.get("/ketqua.hbs", (req, res) => {
-  res.render("ketqua.hbs");
+  res.render("ketqua");
 });
 
 app.get("/", (req, res) => {
-  res.render("home.hbs");
+  res.render("home");
 });
 
 app.get("/search", (req, res) => {
@@ -132,9 +132,9 @@ app.get("/search", (req, res) => {
   res.render("search");
 });
 
-app.post("/hi", (req, res) => {
-  res.render("https://www.youtube.com/?app=desktop&hl=vi");
-});
+// app.post("/hi", (req, res) => {
+//   res.render("https://www.youtube.com/?app=desktop&hl=vi");
+// });
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
