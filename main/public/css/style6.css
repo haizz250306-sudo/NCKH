@@ -1,0 +1,357 @@
+:root {
+  --primary-blue: #007bff;
+  --bg-color: #f3f4f6;
+  --text-dark: #212529;
+  --text-light: #6c757d;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --success: #28a745;
+  --white: #ffffff;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 80px;
+  --border-color: #e5e7eb;
+}
+
+/* 1. RESET & BASIC */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-size: 14px;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* 2. SIDEBAR */
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--white);
+  padding: 20px 15px;
+  position: fixed;
+  height: 100%;
+  border-right: 1px solid var(--border-color);
+  z-index: 1000;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.sidebar.collapsed {
+  width: var(--sidebar-collapsed-width);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-blue);
+  margin-bottom: 30px;
+  height: 40px;
+  padding-left: 10px;
+}
+.logo .logo-icon {
+  width: 40px;
+  min-width: 70px;
+}
+.logo h2 {
+  font-size: 20px;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+.sidebar.collapsed .logo h2 {
+  opacity: 0;
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  flex: 1;
+}
+.menu li {
+  margin-bottom: 6px;
+}
+.menu a {
+  text-decoration: none;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.menu a i {
+  font-size: 18px;
+  min-width: 35px;
+  text-align: center;
+}
+.menu a:hover {
+  background: #eef2f6;
+  color: var(--primary-blue);
+}
+
+/* Active State */
+.menu li.active a {
+  background: var(--primary-blue);
+  color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+.sidebar-footer {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: auto;
+}
+.logout-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--danger);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 15px;
+}
+
+/* Collapsed Fixes */
+.sidebar.collapsed .menu span,
+.sidebar.collapsed .logout-link span {
+  display: none;
+}
+.sidebar.collapsed .menu a {
+  justify-content: center;
+}
+
+/* 3. MAIN CONTENT */
+.main-content {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  padding: 20px 30px;
+  transition: margin-left 0.3s ease;
+}
+.main-content.collapsed {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+/* 4. HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-left h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #333;
+}
+.btn-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  padding: 5px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* 5. STATS CARDS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+.card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.blue-bg {
+  background: #e7f1ff;
+  color: var(--primary-blue);
+}
+.red-bg {
+  background: #ffebeb;
+  color: var(--danger);
+}
+.yellow-bg {
+  background: #fff9db;
+  color: #f39c12;
+}
+
+.card h3 {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.card .number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+.text-danger {
+  color: var(--danger);
+}
+
+/* 6. DASHBOARD GRID (2 COLUMNS) */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+.table-container,
+.risk-container {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Title */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.bar-mark {
+  width: 4px;
+  height: 20px;
+  background: var(--primary-blue);
+  border-radius: 2px;
+}
+.red-mark {
+  background: var(--danger);
+}
+.section-title h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+/* 7. TABLE */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.custom-table th {
+  text-align: left;
+  padding: 12px 10px;
+  color: #888;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+}
+.custom-table td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #f5f5f5;
+  vertical-align: middle;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.status-safe {
+  background: #d4edda;
+  color: #155724;
+}
+.status-danger {
+  background: #ffebeb;
+  color: #dc3545;
+}
+.status-neutral {
+  background: #e9ecef;
+  color: #495057;
+}
+
+/* 8. RISK PANEL (RIGHT COLUMN) */
+.risk-item {
+  background: #fff5f5;
+  border-left: 4px solid var(--danger);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.risk-item h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.risk-item p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.advice-box {
+  background: #fff9db;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  color: #856404;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-primary:hover {
+  background: #0069d9;
+}

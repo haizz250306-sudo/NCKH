@@ -1,0 +1,106 @@
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edu - Alert | Hệ thống cảnh báo học tập</title>
+    <link rel="stylesheet" href="css/style4.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <div class="container">
+      <aside class="sidebar" id="sidebar">
+        <div class="logo">
+          <img class="logo-icon" src="img/Logo APAG chuẩn.png" alt="logo">
+          <h2>Edu - Alert</h2>
+        </div>
+        <ul class="menu">
+          <li><a href="dashboard.hbs"><i class="fas fa-home"></i>
+              <span>Trang chủ</span></a></li>
+          <li class="active"><a href="warning.hbs"><i
+                class="fas fa-exclamation-triangle"
+              ></i>
+              <span>Cảnh báo học tập</span></a></li>
+          <li><a href="/lichhoc.hbs"><i class="fas fa-calendar-alt"></i>
+              <span>Lịch học</span></a></li>
+          <li>
+            <a href="/lichthi.hbs"><i class="fas fa-calendar-check"></i>
+              <span>Lịch thi</span></a>
+          </li>
+          <li><a href="/ketqua.hbs"><i class="fas fa-file-alt"></i>
+              <span>Kết quả học tập</span></a></li>
+          <li><a href="/profile.hbs"><i class="fas fa-user"></i>
+              <span>Hồ sơ sinh viên</span></a></li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="/login.hbs" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Đăng xuất</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content" id="main-content">
+        <header>
+          <div class="header-left">
+            <button id="sidebar-toggle" class="btn-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+
+            <h3>Cảnh báo học tập</h3>
+          </div>
+          <div class="header-right">
+            <div class="notification">
+              <i class="fas fa-bell"></i>
+              Thông báo
+            </div>
+            <div class="user-profile">
+              <i class="fas fa-user-circle"></i>
+              <span id="user-name-display">...</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+
+          <div class="analysis-container">
+            <div class="section-title">
+              <div class="bar-mark"></div>
+              <h3>Hệ Thống Phân Tích & Gợi Ý</h3>
+            </div>
+
+            <div class="table-responsive">
+              <table class="analysis-table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Môn Học</th>
+                    <th style="width: 10%;">GPA</th>
+                    <th style="width: 15%;">Tình Trạng</th>
+                    <th style="width: 40%;">Gợi Ý Hành Động</th>
+                    <th style="width: 15%; text-align: right;">Chi Tiết</th>
+                  </tr>
+                </thead>
+                <tbody id="analysis-table-body">
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="system-advice-box">
+            <div class="advice-header">
+              <i class="fas fa-robot"></i>
+              <h4>Lời khuyên hệ thống:</h4>
+            </div>
+            <p id="system-advice-text">Đang tải phân tích...</p>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <script src="js/main2.js"></script>
+  </body>
+</html>

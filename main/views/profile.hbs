@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu - Alert | Hồ sơ sinh viên</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <img class="logo-icon" src="img/Logo APAG chuẩn.png" alt="logo">
+                <h2>Edu - Alert</h2>
+            </div>
+            
+            <ul class="menu">
+                <li><a href="/dashboard.hbs"><i class="fas fa-home"></i> <span>Trang chủ</span></a></li>
+                <li><a href="/warning.hbs"><i class="fas fa-exclamation-triangle"></i> <span>Cảnh báo học tập</span></a></li>
+                <li><a href="/lichhoc.hbs"><i class="fas fa-calendar-alt"></i> <span>Lịch học</span></a></li>
+                <li><a href="/lichthi.hbs"><i class="fas fa-calendar-check"></i> <span>Lịch thi</span></a></li>
+                <li><a href="/ketqua.hbs"><i class="fas fa-file-alt"></i> <span>Kết quả học tập</span></a></li>
+                <li class="active"><a href="/profile.hbs"><i class="fas fa-user"></i> <span>Hồ sơ sinh viên</span></a></li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <a href="/login.hbs" class="logout-link">
+                    <i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            <header>
+                <div class="header-left">
+                    <button id="sidebar-toggle" class="btn-toggle"><i class="fas fa-bars"></i></button>
+                    <h3>Hồ sơ sinh viên</h3>
+                </div>
+                <div class="header-right">
+                    <div class="notification"><i class="fas fa-bell"></i> Thông báo</div>
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="header-user-name">...</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-one-column">
+                
+                <div class="profile-card">
+                    <div class="section-title">
+                        <div class="bar-mark"></div>
+                        <h3>Thông Tin Cơ Bản</h3>
+                    </div>
+
+                    <div class="info-grid">
+                        <div class="info-group">
+                            <label>Họ và tên</label>
+                            <p id="p-name" class="info-value">...</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Mã số sinh viên</label>
+                            <p id="p-id" class="info-value">...</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Ngày sinh</label>
+                            <p id="p-dob" class="info-value">...</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Giới tính</label>
+                            <p id="p-gender" class="info-value">...</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Email sinh viên</label>
+                            <p id="p-email" class="info-value">...</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Số điện thoại</label>
+                            <p id="p-phone" class="info-value">...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="section-title">
+                        <div class="bar-mark"></div>
+                        <h3>Thông Tin Học Vụ</h3>
+                    </div>
+
+                    <div class="info-grid-full">
+                        <div class="info-group">
+                            <label>Lớp sinh hoạt</label>
+                            <p id="p-class" class="info-value">...</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Khoa / Viện</label>
+                            <p id="p-faculty" class="info-value">...</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Ngành học</label>
+                            <p id="p-major" class="info-value">...</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Khóa học</label>
+                            <p id="p-course" class="info-value">...</p>
+                        </div>
+                        <div class="info-group">
+                            <label>Trạng thái sinh viên</label>
+                            <div><span class="status-badge status-safe">Đang học</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main3.js"></script>
+</body>
+</html>

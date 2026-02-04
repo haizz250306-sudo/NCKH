@@ -1,0 +1,153 @@
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edu - Alert | Hệ thống cảnh báo học tập</title>
+    <link rel="stylesheet" href="css/style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <div class="container">
+      <aside class="sidebar" id="sidebar">
+        <div class="logo">
+          <img class="logo-icon" src="img/Logo APAG chuẩn.png" alt="logo">
+          <h2>Edu - Alert</h2>
+        </div>
+
+        <ul class="menu">
+          <li class="active">
+            <a href="/dashboard.hbs"><i class="fas fa-home"></i>
+              <span>Trang chủ</span></a>
+          </li>
+          <li>
+            <a href="/warning.hbs"><i class="fas fa-exclamation-triangle"></i>
+              <span>Cảnh báo học tập</span></a>
+          </li>
+          <li>
+            <a href="/lichhoc.hbs"><i class="fas fa-calendar-alt"></i>
+              <span>Lịch học</span></a>
+          </li>
+          <li>
+            <a href="/lichthi.hbs"><i class="fas fa-calendar-check"></i>
+              <span>Lịch thi</span></a>
+          </li>
+          <li>
+            <a href="/ketqua.hbs"><i class="fas fa-file-alt"></i>
+              <span>Kết quả học tập</span></a>
+          </li>
+          <li>
+            <a href="/profile.hbs"><i class="fas fa-user"></i>
+              <span>Hồ sơ sinh viên</span></a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="/login.hbs" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Đăng xuất</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content" id="main-content">
+        <header>
+          <div class="header-left">
+            <button id="sidebar-toggle" class="btn-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h3>Tổng quan học tập</h3>
+          </div>
+          <div class="header-right">
+            <div class="notification">
+              <i class="fas fa-bell"></i>
+              Thông báo
+            </div>
+            <div class="user-profile">
+              <i class="fas fa-user-circle"></i>
+              <span id="user-name-display">Đang tải...</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="stats-grid">
+          <div class="card">
+            <div class="card-icon blue-bg">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="card-info">
+              <h3>GPA Tích Lũy</h3>
+              <div class="number" id="gpa-value">...</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon red-bg">
+              <i class="fas fa-book-dead"></i>
+            </div>
+            <div class="card-info">
+              <h3>Môn Nguy Cơ</h3>
+              <div class="number text-red" id="risk-count">...</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon yellow-bg">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="card-info">
+              <h3>Tín Chỉ Tích Lũy</h3>
+              <div class="number" id="credits-count">...</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+
+          <div class="table-container">
+            <div class="section-title">
+              <div class="bar-mark"></div>
+              <h3>Kết Quả Học Tập Kỳ Này</h3>
+            </div>
+
+            <div class="table-responsive">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Môn học</th>
+                    <th>Số TC</th>
+                    <th>Điểm QT</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody id="subject-table-body">
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="risk-container">
+            <div class="section-title">
+              <div class="bar-mark red-mark"></div>
+              <h3>Cảnh Báo & Khuyến Nghị</h3>
+            </div>
+
+            <div class="risk-list" id="risk-list-container">
+            </div>
+
+            <div class="advice-box">
+              <i class="fas fa-lightbulb"></i>
+              <p id="advice-text">Đang tải dữ liệu...</p>
+            </div>
+
+            <button class="btn-primary">ĐĂNG KÝ HỌC CẢI THIỆN</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/main1.js"></script>
+  </body>
+</html>

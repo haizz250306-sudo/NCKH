@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
+    <link rel="stylesheet" href="css/style1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Hệ thống cảnh báo học tập</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header">
+        <img src="../img/Logo APAG chuẩn.png" alt="logo" />
+        <h1>Hệ thống cảnh báo <br />học tập</h1>
+      </div>
+      <div class="main-body">
+        <!-- <h2>Đăng Nhập</h2> -->
+        <form action="/dashboard" method="POST">
+          <hr />
+          <div class="form-group">
+            <label for="text1">Mã sinh viên/Email</label>
+            <div class="input1">
+              <i class="fa-regular fa-user input-icon"></i>
+              <input
+                type="text"
+                name="username"
+                class="Account"
+                placeholder="Tài khoản"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="text1">Mật khẩu</label>
+            <div class="input1">
+              <i class="fa-solid fa-lock input-icon"></i>
+              <input
+                type="password" name="password" class="pass" placeholder="Mật khẩu" required
+              />
+              <i
+                class="fa-solid fa-eye" id="toggleIcon" onclick="togglePassword()"
+              ></i>
+            </div>
+          </div>
+          <input class="btn-login" type="submit" value="Đăng nhập" />
+        </form>
+        <a class="teacher" href="login2.hbs">Bạn là giảng viên?</a>
+        <img class="book" src="img/z7467588016921_b2bc4f56e4361d6a58c447576f9cbfa1-removebg-preview.png" alt="book"/>
+        <footer class="endnote">© 2026 Edu - Alert. All right server</footer>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

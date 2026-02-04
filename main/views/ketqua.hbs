@@ -1,0 +1,208 @@
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edu - Alert | Kết quả học tập</title>
+    <link rel="stylesheet" href="css/style5.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <div class="container">
+      <aside class="sidebar" id="sidebar">
+        <div class="logo">
+          <img class="logo-icon" src="img/Logo APAG chuẩn.png" alt="logo">
+          <h2>Edu - Alert</h2>
+        </div>
+
+        <ul class="menu">
+          <li><a href="/dashboard.hbs"><i class="fas fa-home"></i>
+              <span>Trang chủ</span></a></li>
+          <li><a href="/warning.hbs"><i class="fas fa-exclamation-triangle"></i>
+              <span>Cảnh báo học tập</span></a></li>
+          <li><a href="/lichhoc.hbs"><i class="fas fa-calendar-alt"></i>
+              <span>Lịch học</span></a></li>
+          <li><a href="/lichthi.hbs"><i class="fas fa-calendar-check"></i>
+              <span>Lịch thi</span></a></li>
+
+          <li class="active"><a href="/ketqua.hbs"><i
+                class="fas fa-file-alt"
+              ></i>
+              <span>Kết quả học tập</span></a></li>
+
+          <li><a href="/profile.hbs"><i class="fas fa-user"></i>
+              <span>Hồ sơ sinh viên</span></a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+          <a href="/login.hbs" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Đăng xuất</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content" id="main-content">
+        <header>
+          <div class="header-left">
+            <button id="sidebar-toggle" class="btn-toggle"><i
+                class="fas fa-bars"
+              ></i></button>
+            <h3>Kết quả học tập</h3>
+          </div>
+          <div class="header-right">
+            <div class="notification"><i class="fas fa-bell"></i>
+              Thông báo |</div>
+            <div class="user-profile">
+              <i class="fas fa-user-circle"></i>
+              <span id="header-user-name">Nguyễn Văn A - SV2024001</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="result-container">
+
+          <div class="filter-card">
+            <div class="filter-row">
+              <div class="filter-group">
+                <label>Chọn năm học:</label>
+                <select class="custom-select">
+                  <option>2025 - 2026</option>
+                  <option>2024 - 2025</option>
+                  <option>2023 - 2024</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label>Chọn học kỳ:</label>
+                <select class="custom-select">
+                  <option>Học kỳ 2</option>
+                  <option>Học kỳ 1</option>
+                  <option>Học kỳ Hè</option>
+                </select>
+              </div>
+              <button class="btn-filter"><i class="fas fa-search"></i>
+                Xem kết quả</button>
+            </div>
+          </div>
+
+          <div class="score-card">
+            <div class="page-title">
+              <div class="bar-mark"></div>
+              <h3>Bảng Điểm Học Kỳ 2 (2025-2026)</h3>
+            </div>
+
+            <div class="table-responsive">
+              <table class="result-table">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Mã HP</th>
+                    <th style="text-align: left;">Tên Học Phần</th>
+                    <th>TC</th>
+                    <th>Đ.QT</th>
+                    <th>Đ.Thi</th>
+                    <th>TK(10)</th>
+                    <th>TK(Chữ)</th>
+                    <th>Kết Quả</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>MATH101</td>
+                    <td style="text-align: left; font-weight: 600;">Toán Cao Cấp
+                      A1</td>
+                    <td>3</td>
+                    <td>7.5</td>
+                    <td>8.0</td>
+                    <td class="score-bold">7.8</td>
+                    <td>B</td>
+                    <td><span class="status-badge status-safe"><i
+                          class="fas fa-check"
+                        ></i>
+                        Đạt</span></td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>PROG102</td>
+                    <td style="text-align: left; font-weight: 600;">Lập Trình
+                      C++</td>
+                    <td>4</td>
+                    <td>4.0</td>
+                    <td>3.0</td>
+                    <td class="score-bold text-danger">3.4</td>
+                    <td class="text-danger fw-bold">F</td>
+                    <td><span class="status-badge status-danger"><i
+                          class="fas fa-times"
+                        ></i>
+                        Hỏng</span></td>
+                  </tr>
+
+                  <tr>
+                    <td>3</td>
+                    <td>ENG201</td>
+                    <td style="text-align: left; font-weight: 600;">Tiếng Anh B1</td>
+                    <td>3</td>
+                    <td>8.0</td>
+                    <td>8.5</td>
+                    <td class="score-bold">8.3</td>
+                    <td>B+</td>
+                    <td><span class="status-badge status-safe"><i
+                          class="fas fa-check"
+                        ></i>
+                        Đạt</span></td>
+                  </tr>
+
+                  <tr>
+                    <td>4</td>
+                    <td>POL101</td>
+                    <td style="text-align: left; font-weight: 600;">Triết Học
+                      Mác - Lênin</td>
+                    <td>3</td>
+                    <td>6.5</td>
+                    <td>5.5</td>
+                    <td class="score-bold">5.8</td>
+                    <td>C</td>
+                    <td><span class="status-badge status-neutral"><i
+                          class="fas fa-check"
+                        ></i>
+                        Đạt</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="summary-section">
+              <div class="summary-box">
+                <span>Số TC đăng ký</span>
+                <strong>13</strong>
+              </div>
+              <div class="summary-box">
+                <span>Số TC đạt</span>
+                <strong>9</strong>
+              </div>
+              <div class="summary-box highlight">
+                <span>Điểm TB Học kỳ (4.0)</span>
+                <strong>2.65</strong>
+              </div>
+              <div class="summary-box">
+                <span>Điểm TB Tích lũy</span>
+                <strong>3.10</strong>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-download-full"><i class="fas fa-print"></i>
+            IN BẢNG ĐIỂM</button>
+
+        </div>
+      </main>
+    </div>
+
+    <script src="js/main4.js"></script>
+  </body>
+</html>

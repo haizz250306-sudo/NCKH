@@ -26,21 +26,20 @@
   "lint-staged": {
     "main/**/*.{js,json,scss,hbs}": "prettier --single-quote --trailing-comma all --write"
   },
-  "husky":{
-    "hook":{
+  "husky": {
+    "hook": {
       "pre-commit": "lint-staged"
     }
   },
   "dependencies": {
     "express": "^5.2.1",
-    "express-handlebars": "^8.0.4"
+    "express-handlebars": "^8.0.4",
+    "mssql": "^12.2.0",
+    "tedious": "^19.2.0"
   },
   "devDependencies": {
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.11",
-    "prettier": "^3.8.1",
     "sass": "^1.97.3"
   }
 }

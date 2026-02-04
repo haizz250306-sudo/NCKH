@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu - Alert | Lịch học</title>
+    <link rel="stylesheet" href="css/style5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+               <img class="logo-icon" src="img/Logo APAG chuẩn.png" alt="logo">
+                <h2>Edu - Alert</h2>
+            </div>
+            
+            <ul class="menu">
+                <li><a href="/dashboard.hbs"><i class="fas fa-home"></i> <span>Trang chủ</span></a></li>
+                <li><a href="/warning.hbs"><i class="fas fa-exclamation-triangle"></i> <span>Cảnh báo học tập</span></a></li>
+                <li class="active"><a href="/lichhoc.hbs"><i class="fas fa-calendar-alt"></i> <span>Lịch học</span></a></li>
+                <li><a href="/lichthi.hbs"><i class="fas fa-calendar-check"></i> <span>Lịch thi</span></a></li>
+                <li><a href="/ketqua.hbs"><i class="fas fa-file-alt"></i> <span>Kết quả học tập</span></a></li>
+                <li><a href="/profile.hbs"><i class="fas fa-user"></i> <span>Hồ sơ sinh viên</span></a></li>
+            </ul>
+
+             <div class="sidebar-footer">
+                <a href="/login.hbs" class="logout-link">
+                    <i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            <header>
+                <div class="header-left">
+                    <button id="sidebar-toggle" class="btn-toggle"><i class="fas fa-bars"></i></button>
+                    <h3>Lịch học</h3> </div>
+                <div class="header-right">
+                    <div class="notification"><i class="fas fa-bell"></i> Thông báo |</div>
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="header-user-name">Nguyễn Văn A - SV001</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="schedule-container">
+                
+                <div class="page-title">
+                    <div class="bar-mark"></div>
+                    <h3>Lịch Học (Tuần từ 02/02/2026 đến 08/02/2026)</h3>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="schedule-table-detail">
+                        <thead>
+                            <tr>
+                                <th class="col-ca">Ca<br>Học</th>
+                                <th>Thứ 2 (02/02)</th>
+                                <th>Thứ 3 (03/02)</th>
+                                <th>Thứ 4 (04/02)</th>
+                                <th>Thứ 5 (05/02)</th>
+                                <th>Thứ 6 (06/02)</th>
+                                <th>Thứ 7 (07/02)</th>
+                                <th>CN (08/02)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="session-cell">Sáng</td>
+                                
+                                <td>
+                                    <div class="subject-info">
+                                        <h4>Giáo dục thể chất</h4>
+                                        <p>Tiết học: 2-5</p>
+                                        <p>Mã lớp: ISF0010_K24.1</p>
+                                        <p>GV: Bành Thang Long</p>
+                                        <p>Phòng: Sân bãi</p>
+                                        <p>Hình thức: Trực tiếp</p>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="subject-info">
+                                        <h4>Cơ sở dữ liệu</h4>
+                                        <p>Tiết học: 1-4</p>
+                                        <p>Mã lớp: LIF1005_K24</p>
+                                        <p>GV: Nguyễn T. T. Hoa</p>
+                                        <p>Phòng: A36XL-A702</p>
+                                        <p>Hình thức: Trực tiếp</p>
+                                    </div>
+                                </td>
+
+                                <td class="empty-cell">Không có lịch</td>
+
+                                <td>
+                                    <div class="subject-info">
+                                        <h4>Toán Cao Cấp A1</h4>
+                                        <p>Tiết học: 1-3</p>
+                                        <p>Mã lớp: MAT1001_K24</p>
+                                        <p>GV: Trần Thị B</p>
+                                        <p>Phòng: A101</p>
+                                        <p>Hình thức: Trực tiếp</p>
+                                    </div>
+                                </td>
+
+                                <td class="empty-cell">Không có lịch</td>
+                                <td class="empty-cell">Không có lịch</td>
+                                <td class="empty-cell">Không có lịch</td>
+                            </tr>
+
+                            <tr>
+                                <td class="session-cell">Chiều</td>
+
+                                <td class="empty-cell">Không có lịch</td>
+
+                                <td>
+                                    <div class="subject-info">
+                                        <h4>Hệ điều hành</h4>
+                                        <p>Tiết học: 6-8</p>
+                                        <p>Mã lớp: LIF1003_K24</p>
+                                        <p>GV: Bùi Thị Thanh</p>
+                                        <p>Phòng: A36XL-A403</p>
+                                        <p>Hình thức: Trực tiếp</p>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="subject-info">
+                                        <h4>Kỹ Năng Mềm</h4>
+                                        <p>Tiết học: 7-9</p>
+                                        <p>Mã lớp: SKL1001_K24</p>
+                                        <p>GV: Phạm Thị D</p>
+                                        <p>Phòng: C312</p>
+                                        <p>Hình thức: Trực tiếp</p>
+                                        <p class="note">Ghi chú: Thảo luận</p>
+                                    </div>
+                                </td>
+
+                                <td class="empty-cell">Không có lịch</td>
+
+                                <td>
+                                    <div class="subject-info">
+                                        <h4>Lập Trình C++</h4>
+                                        <p>Tiết học: 4-6</p>
+                                        <p>Mã lớp: PRG1002_K24</p>
+                                        <p>GV: Lê Văn C</p>
+                                        <p>Phòng: B205</p>
+                                        <p>Hình thức: Trực tiếp</p>
+                                    </div>
+                                </td>
+
+                                <td class="empty-cell">Không có lịch</td>
+                                <td class="empty-cell">Không có lịch</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn-download-full">TẢI LỊCH HỌC (PDF)</button>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main4.js"></script>
+</body>
+</html>
